@@ -1,0 +1,20 @@
+//
+//  
+//    ___  _____   ______  __ _   _________ 
+//   / _ \/ __/ | / / __ \/ /| | / / __/ _ \
+//  / , _/ _/ | |/ / /_/ / /_| |/ / _// , _/
+// /_/|_/___/ |___/\____/____/___/___/_/|_| 
+//
+//  Created by Bart Claessens. bart (at) revolver . be
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

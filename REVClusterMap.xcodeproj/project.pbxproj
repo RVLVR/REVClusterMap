@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8281F7A213D3404D00BB4FA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8281F7A113D3404D00BB4FA9 /* UIKit.framework */; };
+		8281F7A413D3404D00BB4FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8281F7A313D3404D00BB4FA9 /* Foundation.framework */; };
+		8281F7A613D3404D00BB4FA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8281F7A513D3404D00BB4FA9 /* CoreGraphics.framework */; };
+		8281F7AC13D3404D00BB4FA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7AA13D3404D00BB4FA9 /* InfoPlist.strings */; };
+		8281F7AF13D3404D00BB4FA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7AE13D3404D00BB4FA9 /* main.m */; };
+		8281F7B213D3404D00BB4FA9 /* REVClusterMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7B113D3404D00BB4FA9 /* REVClusterMapAppDelegate.m */; };
+		8281F7B613D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7B513D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.m */; };
+		8281F7B913D3404D00BB4FA9 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7B713D3404D00BB4FA9 /* MainWindow_iPhone.xib */; };
+		8281F7BD13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7BC13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.m */; };
+		8281F7C013D3404D00BB4FA9 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7BE13D3404D00BB4FA9 /* MainWindow_iPad.xib */; };
+		8281F7D213D3412600BB4FA9 /* REVAnnotationsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7C813D3412600BB4FA9 /* REVAnnotationsCollection.m */; };
+		8281F7D313D3412600BB4FA9 /* REVClusterBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7CA13D3412600BB4FA9 /* REVClusterBlock.m */; };
+		8281F7D413D3412600BB4FA9 /* REVClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7CC13D3412600BB4FA9 /* REVClusterManager.m */; };
+		8281F7D513D3412600BB4FA9 /* REVClusterMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7CF13D3412600BB4FA9 /* REVClusterMapView.m */; };
+		8281F7D613D3412600BB4FA9 /* REVClusterPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7D113D3412600BB4FA9 /* REVClusterPin.m */; };
+		8281F7D813D3413B00BB4FA9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8281F7D713D3413B00BB4FA9 /* MapKit.framework */; };
+		8281F7DB13D3414E00BB4FA9 /* REVMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7DA13D3414E00BB4FA9 /* REVMapViewController.m */; };
+		8281F7E413D3418D00BB4FA9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7DF13D3418D00BB4FA9 /* Icon.png */; };
+		8281F7E613D3418D00BB4FA9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7E113D3418D00BB4FA9 /* Icon@2x.png */; };
+		8281F7E813D341D700BB4FA9 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7E713D341D700BB4FA9 /* Icon-72.png */; };
+		8281F7EC13D342DB00BB4FA9 /* Default-ipad-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7E913D342DB00BB4FA9 /* Default-ipad-Landscape.png */; };
+		8281F7ED13D342DB00BB4FA9 /* Default-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7EA13D342DB00BB4FA9 /* Default-iphone.png */; };
+		8281F7EE13D342DB00BB4FA9 /* Default@2x-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7EB13D342DB00BB4FA9 /* Default@2x-iphone.png */; };
+		8281F7F413D34A8900BB4FA9 /* cluster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7F013D34A8900BB4FA9 /* cluster.png */; };
+		8281F7F513D34A8900BB4FA9 /* cluster@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7F113D34A8900BB4FA9 /* cluster@2x.png */; };
+		8281F7F613D34A8900BB4FA9 /* pinpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7F213D34A8900BB4FA9 /* pinpoint.png */; };
+		8281F7F713D34A8900BB4FA9 /* pinpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8281F7F313D34A8900BB4FA9 /* pinpoint@2x.png */; };
+		8281F7FD13D34BAE00BB4FA9 /* REVClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281F7FC13D34BAE00BB4FA9 /* REVClusterAnnotationView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8281F79D13D3404D00BB4FA9 /* REVClusterMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REVClusterMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8281F7A113D3404D00BB4FA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8281F7A313D3404D00BB4FA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8281F7A513D3404D00BB4FA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8281F7A913D3404D00BB4FA9 /* REVClusterMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "REVClusterMap-Info.plist"; sourceTree = "<group>"; };
+		8281F7AB13D3404D00BB4FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8281F7AD13D3404D00BB4FA9 /* REVClusterMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REVClusterMap-Prefix.pch"; sourceTree = "<group>"; };
+		8281F7AE13D3404D00BB4FA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8281F7B013D3404D00BB4FA9 /* REVClusterMapAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REVClusterMapAppDelegate.h; sourceTree = "<group>"; };
+		8281F7B113D3404D00BB4FA9 /* REVClusterMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REVClusterMapAppDelegate.m; sourceTree = "<group>"; };
+		8281F7B413D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = REVClusterMapAppDelegate_iPhone.h; path = iPhone/REVClusterMapAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		8281F7B513D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = REVClusterMapAppDelegate_iPhone.m; path = iPhone/REVClusterMapAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		8281F7B813D3404D00BB4FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		8281F7BB13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = REVClusterMapAppDelegate_iPad.h; path = iPad/REVClusterMapAppDelegate_iPad.h; sourceTree = "<group>"; };
+		8281F7BC13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = REVClusterMapAppDelegate_iPad.m; path = iPad/REVClusterMapAppDelegate_iPad.m; sourceTree = "<group>"; };
+		8281F7BF13D3404D00BB4FA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		8281F7C713D3412600BB4FA9 /* REVAnnotationsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVAnnotationsCollection.h; sourceTree = "<group>"; };
+		8281F7C813D3412600BB4FA9 /* REVAnnotationsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVAnnotationsCollection.m; sourceTree = "<group>"; };
+		8281F7C913D3412600BB4FA9 /* REVClusterBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVClusterBlock.h; sourceTree = "<group>"; };
+		8281F7CA13D3412600BB4FA9 /* REVClusterBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVClusterBlock.m; sourceTree = "<group>"; };
+		8281F7CB13D3412600BB4FA9 /* REVClusterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVClusterManager.h; sourceTree = "<group>"; };
+		8281F7CC13D3412600BB4FA9 /* REVClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVClusterManager.m; sourceTree = "<group>"; };
+		8281F7CD13D3412600BB4FA9 /* REVClusterMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVClusterMap.h; sourceTree = "<group>"; };
+		8281F7CE13D3412600BB4FA9 /* REVClusterMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVClusterMapView.h; sourceTree = "<group>"; };
+		8281F7CF13D3412600BB4FA9 /* REVClusterMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVClusterMapView.m; sourceTree = "<group>"; };
+		8281F7D013D3412600BB4FA9 /* REVClusterPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVClusterPin.h; sourceTree = "<group>"; };
+		8281F7D113D3412600BB4FA9 /* REVClusterPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVClusterPin.m; sourceTree = "<group>"; };
+		8281F7D713D3413B00BB4FA9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8281F7D913D3414E00BB4FA9 /* REVMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVMapViewController.h; sourceTree = "<group>"; };
+		8281F7DA13D3414E00BB4FA9 /* REVMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVMapViewController.m; sourceTree = "<group>"; };
+		8281F7DF13D3418D00BB4FA9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8281F7E113D3418D00BB4FA9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		8281F7E713D341D700BB4FA9 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		8281F7E913D342DB00BB4FA9 /* Default-ipad-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-ipad-Landscape.png"; sourceTree = "<group>"; };
+		8281F7EA13D342DB00BB4FA9 /* Default-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iphone.png"; sourceTree = "<group>"; };
+		8281F7EB13D342DB00BB4FA9 /* Default@2x-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x-iphone.png"; sourceTree = "<group>"; };
+		8281F7F013D34A8900BB4FA9 /* cluster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cluster.png; sourceTree = "<group>"; };
+		8281F7F113D34A8900BB4FA9 /* cluster@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cluster@2x.png"; sourceTree = "<group>"; };
+		8281F7F213D34A8900BB4FA9 /* pinpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpoint.png; sourceTree = "<group>"; };
+		8281F7F313D34A8900BB4FA9 /* pinpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinpoint@2x.png"; sourceTree = "<group>"; };
+		8281F7FB13D34BAE00BB4FA9 /* REVClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REVClusterAnnotationView.h; sourceTree = "<group>"; };
+		8281F7FC13D34BAE00BB4FA9 /* REVClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REVClusterAnnotationView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8281F79A13D3404D00BB4FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8281F7D813D3413B00BB4FA9 /* MapKit.framework in Frameworks */,
+				8281F7A213D3404D00BB4FA9 /* UIKit.framework in Frameworks */,
+				8281F7A413D3404D00BB4FA9 /* Foundation.framework in Frameworks */,
+				8281F7A613D3404D00BB4FA9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8281F79213D3404D00BB4FA9 = {
+			isa = PBXGroup;
+			children = (
+				8281F7D713D3413B00BB4FA9 /* MapKit.framework */,
+				8281F7A713D3404D00BB4FA9 /* REVClusterMap */,
+				8281F7A013D3404D00BB4FA9 /* Frameworks */,
+				8281F79E13D3404D00BB4FA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8281F79E13D3404D00BB4FA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8281F79D13D3404D00BB4FA9 /* REVClusterMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8281F7A013D3404D00BB4FA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7A113D3404D00BB4FA9 /* UIKit.framework */,
+				8281F7A313D3404D00BB4FA9 /* Foundation.framework */,
+				8281F7A513D3404D00BB4FA9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8281F7A713D3404D00BB4FA9 /* REVClusterMap */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7C613D3412600BB4FA9 /* REVClusterMap */,
+				8281F7B013D3404D00BB4FA9 /* REVClusterMapAppDelegate.h */,
+				8281F7B113D3404D00BB4FA9 /* REVClusterMapAppDelegate.m */,
+				8281F7D913D3414E00BB4FA9 /* REVMapViewController.h */,
+				8281F7DA13D3414E00BB4FA9 /* REVMapViewController.m */,
+				8281F7FB13D34BAE00BB4FA9 /* REVClusterAnnotationView.h */,
+				8281F7FC13D34BAE00BB4FA9 /* REVClusterAnnotationView.m */,
+				8281F7B313D3404D00BB4FA9 /* iPhone */,
+				8281F7BA13D3404D00BB4FA9 /* iPad */,
+				8281F7A813D3404D00BB4FA9 /* Supporting Files */,
+				8281F7DC13D3418D00BB4FA9 /* Recources */,
+			);
+			path = REVClusterMap;
+			sourceTree = "<group>";
+		};
+		8281F7A813D3404D00BB4FA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7A913D3404D00BB4FA9 /* REVClusterMap-Info.plist */,
+				8281F7AA13D3404D00BB4FA9 /* InfoPlist.strings */,
+				8281F7AD13D3404D00BB4FA9 /* REVClusterMap-Prefix.pch */,
+				8281F7AE13D3404D00BB4FA9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8281F7B313D3404D00BB4FA9 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7B413D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.h */,
+				8281F7B513D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.m */,
+				8281F7B713D3404D00BB4FA9 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		8281F7BA13D3404D00BB4FA9 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7BB13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.h */,
+				8281F7BC13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.m */,
+				8281F7BE13D3404D00BB4FA9 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		8281F7C613D3412600BB4FA9 /* REVClusterMap */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7C713D3412600BB4FA9 /* REVAnnotationsCollection.h */,
+				8281F7C813D3412600BB4FA9 /* REVAnnotationsCollection.m */,
+				8281F7C913D3412600BB4FA9 /* REVClusterBlock.h */,
+				8281F7CA13D3412600BB4FA9 /* REVClusterBlock.m */,
+				8281F7CB13D3412600BB4FA9 /* REVClusterManager.h */,
+				8281F7CC13D3412600BB4FA9 /* REVClusterManager.m */,
+				8281F7CD13D3412600BB4FA9 /* REVClusterMap.h */,
+				8281F7CE13D3412600BB4FA9 /* REVClusterMapView.h */,
+				8281F7CF13D3412600BB4FA9 /* REVClusterMapView.m */,
+				8281F7D013D3412600BB4FA9 /* REVClusterPin.h */,
+				8281F7D113D3412600BB4FA9 /* REVClusterPin.m */,
+			);
+			path = REVClusterMap;
+			sourceTree = "<group>";
+		};
+		8281F7DC13D3418D00BB4FA9 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7EF13D34A8900BB4FA9 /* assets */,
+				8281F7E913D342DB00BB4FA9 /* Default-ipad-Landscape.png */,
+				8281F7EA13D342DB00BB4FA9 /* Default-iphone.png */,
+				8281F7EB13D342DB00BB4FA9 /* Default@2x-iphone.png */,
+				8281F7DF13D3418D00BB4FA9 /* Icon.png */,
+				8281F7E113D3418D00BB4FA9 /* Icon@2x.png */,
+				8281F7E713D341D700BB4FA9 /* Icon-72.png */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		8281F7EF13D34A8900BB4FA9 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				8281F7F013D34A8900BB4FA9 /* cluster.png */,
+				8281F7F113D34A8900BB4FA9 /* cluster@2x.png */,
+				8281F7F213D34A8900BB4FA9 /* pinpoint.png */,
+				8281F7F313D34A8900BB4FA9 /* pinpoint@2x.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8281F79C13D3404D00BB4FA9 /* REVClusterMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8281F7C313D3404D00BB4FA9 /* Build configuration list for PBXNativeTarget "REVClusterMap" */;
+			buildPhases = (
+				8281F79913D3404D00BB4FA9 /* Sources */,
+				8281F79A13D3404D00BB4FA9 /* Frameworks */,
+				8281F79B13D3404D00BB4FA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = REVClusterMap;
+			productName = REVClusterMap;
+			productReference = 8281F79D13D3404D00BB4FA9 /* REVClusterMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8281F79413D3404D00BB4FA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = REVOLVER;
+			};
+			buildConfigurationList = 8281F79713D3404D00BB4FA9 /* Build configuration list for PBXProject "REVClusterMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8281F79213D3404D00BB4FA9;
+			productRefGroup = 8281F79E13D3404D00BB4FA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8281F79C13D3404D00BB4FA9 /* REVClusterMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8281F79B13D3404D00BB4FA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8281F7AC13D3404D00BB4FA9 /* InfoPlist.strings in Resources */,
+				8281F7B913D3404D00BB4FA9 /* MainWindow_iPhone.xib in Resources */,
+				8281F7C013D3404D00BB4FA9 /* MainWindow_iPad.xib in Resources */,
+				8281F7E413D3418D00BB4FA9 /* Icon.png in Resources */,
+				8281F7E613D3418D00BB4FA9 /* Icon@2x.png in Resources */,
+				8281F7E813D341D700BB4FA9 /* Icon-72.png in Resources */,
+				8281F7EC13D342DB00BB4FA9 /* Default-ipad-Landscape.png in Resources */,
+				8281F7ED13D342DB00BB4FA9 /* Default-iphone.png in Resources */,
+				8281F7EE13D342DB00BB4FA9 /* Default@2x-iphone.png in Resources */,
+				8281F7F413D34A8900BB4FA9 /* cluster.png in Resources */,
+				8281F7F513D34A8900BB4FA9 /* cluster@2x.png in Resources */,
+				8281F7F613D34A8900BB4FA9 /* pinpoint.png in Resources */,
+				8281F7F713D34A8900BB4FA9 /* pinpoint@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8281F79913D3404D00BB4FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8281F7AF13D3404D00BB4FA9 /* main.m in Sources */,
+				8281F7B213D3404D00BB4FA9 /* REVClusterMapAppDelegate.m in Sources */,
+				8281F7B613D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPhone.m in Sources */,
+				8281F7BD13D3404D00BB4FA9 /* REVClusterMapAppDelegate_iPad.m in Sources */,
+				8281F7D213D3412600BB4FA9 /* REVAnnotationsCollection.m in Sources */,
+				8281F7D313D3412600BB4FA9 /* REVClusterBlock.m in Sources */,
+				8281F7D413D3412600BB4FA9 /* REVClusterManager.m in Sources */,
+				8281F7D513D3412600BB4FA9 /* REVClusterMapView.m in Sources */,
+				8281F7D613D3412600BB4FA9 /* REVClusterPin.m in Sources */,
+				8281F7DB13D3414E00BB4FA9 /* REVMapViewController.m in Sources */,
+				8281F7FD13D34BAE00BB4FA9 /* REVClusterAnnotationView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8281F7AA13D3404D00BB4FA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8281F7AB13D3404D00BB4FA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8281F7B713D3404D00BB4FA9 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8281F7B813D3404D00BB4FA9 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		8281F7BE13D3404D00BB4FA9 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8281F7BF13D3404D00BB4FA9 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8281F7C113D3404D00BB4FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8281F7C213D3404D00BB4FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8281F7C413D3404D00BB4FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REVClusterMap/REVClusterMap-Prefix.pch";
+				INFOPLIST_FILE = "REVClusterMap/REVClusterMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8281F7C513D3404D00BB4FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "REVClusterMap/REVClusterMap-Prefix.pch";
+				INFOPLIST_FILE = "REVClusterMap/REVClusterMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8281F79713D3404D00BB4FA9 /* Build configuration list for PBXProject "REVClusterMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8281F7C113D3404D00BB4FA9 /* Debug */,
+				8281F7C213D3404D00BB4FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8281F7C313D3404D00BB4FA9 /* Build configuration list for PBXNativeTarget "REVClusterMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8281F7C413D3404D00BB4FA9 /* Debug */,
+				8281F7C513D3404D00BB4FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8281F79413D3404D00BB4FA9 /* Project object */;
+}
