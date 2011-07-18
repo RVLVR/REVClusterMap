@@ -99,7 +99,7 @@
 {
     for ( REVClusterPin *pin in mapView.annotations )
     {
-        if( [[pin nodes] count] > 0 )
+        if( [pin isKindOfClass:[REVClusterPin class]] && [[pin nodes] count] > 0 )
         {
             MKMapPoint point1 =  MKMapPointForCoordinate([pin coordinate]);
             MKMapPoint point2 =  MKMapPointForCoordinate([[cluster getClusteredAnnotation] coordinate]);

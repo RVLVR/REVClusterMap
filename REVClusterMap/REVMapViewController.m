@@ -47,6 +47,7 @@
     
     _mapView = [[REVClusterMapView alloc] initWithFrame:viewBounds];
     _mapView.delegate = self;
+
     [self.view addSubview:_mapView];
     
     CLLocationCoordinate2D coordinate;
@@ -56,13 +57,13 @@
     
     NSMutableArray *pins = [NSMutableArray array];
     
-    for(int i=0;i<5000;i++) {
+    for(int i=0;i<50;i++) {
         CGFloat latDelta = rand()*0.125/RAND_MAX - 0.02;
         CGFloat lonDelta = rand()*0.130/RAND_MAX - 0.08;
         
         CGFloat lat = 51.21992;
         CGFloat lng = 4.39625;
-
+        
         
         CLLocationCoordinate2D newCoord = {lat+latDelta, lng+lonDelta};
         REVClusterPin *pin = [[REVClusterPin alloc] init];
@@ -79,7 +80,12 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-   REVClusterPin *pin = (REVClusterPin *)annotation;
+    if([annotation class] == MKUserLocation.class) {
+		//userLocation = annotation;
+		return nil;
+	}
+    
+    REVClusterPin *pin = (REVClusterPin *)annotation;
     
     MKAnnotationView *annView;
     
