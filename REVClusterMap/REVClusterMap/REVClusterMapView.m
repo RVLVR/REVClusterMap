@@ -41,6 +41,11 @@
 }
 
 
+- (void)dealloc
+{
+    [annotationsCopy release];
+    [super dealloc];
+}
 
 -(MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
