@@ -13,6 +13,7 @@
 #import "REVClusterManager.h"
 
 @interface REVClusterMapView (Private)
+- (void) setup;
 - (BOOL) mapViewDidZoom;
 @end
 
@@ -28,18 +29,32 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        annotationsCopy = nil;
-        
-        self.minimumClusterLevel = 100000;
-        self.blocks = 4;
-        
-        super.delegate = self;
-        
-        zoomLevel = self.visibleMapRect.size.width * self.visibleMapRect.size.height;
+        [self setup];
     }
     return self;
 }
 
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        [self setup];
+    }
+    return self;
+}
+
+- (void) setup
+{
+    annotationsCopy = nil;
+    
+    self.minimumClusterLevel = 100000;
+    self.blocks = 4;
+    
+    super.delegate = self;
+    
+    zoomLevel = self.visibleMapRect.size.width * self.visibleMapRect.size.height;
+}
 
 - (void)dealloc
 {
