@@ -63,7 +63,9 @@
     {
         REVClusterBlock *block = [[REVClusterBlock alloc] init];
         [clusteredBlocks addObject:block];
+        #if !__has_feature(objc_arc)
         [block release];  
+#endif
     }
     
     for (REVClusterPin *pin in visibleAnnotations)
