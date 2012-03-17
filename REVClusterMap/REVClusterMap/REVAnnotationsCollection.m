@@ -44,10 +44,11 @@
     return [collection count];
 }
 
-
+#if !__has_feature(objc_arc)
 -(void)dealloc
 {
     [collection release], collection = nil;
     [super dealloc];
 }
+#endif
 @end

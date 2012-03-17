@@ -40,8 +40,11 @@
         double y = [annotationsCollection ySum] / [annotationsCollection count];
         
         CLLocationCoordinate2D location = MKCoordinateForMapPoint(MKMapPointMake(x, y));
-
+        #if !__has_feature(objc_arc)
         REVClusterPin *pin = [[[REVClusterPin alloc] init] autorelease];
+#else
+        REVClusterPin *pin = [[REVClusterPin alloc] init];
+#endif
         pin.coordinate = location;
         pin.nodes = [annotationsCollection collection];
         return pin;
@@ -60,10 +63,12 @@
     return [NSString stringWithFormat:@"%i annotations",[self count]];
 }
 
+#if !__has_feature(objc_arc)
 - (void) dealloc
 {
     [annotationsCollection release], annotationsCollection = nil;
     [super dealloc];
 }
+#endif
 
 @end

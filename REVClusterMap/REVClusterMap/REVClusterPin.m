@@ -22,6 +22,7 @@
     return 0;
 }
 
+#if !__has_feature(objc_arc)
 - (void)dealloc
 {
     [title release];
@@ -29,4 +30,6 @@
     [nodes release];
     [super dealloc];
 }
+#endif
+
 @end
