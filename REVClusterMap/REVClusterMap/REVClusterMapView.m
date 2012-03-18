@@ -56,11 +56,13 @@
     zoomLevel = self.visibleMapRect.size.width * self.visibleMapRect.size.height;
 }
 
+#if !__has_feature(objc_arc)
 - (void)dealloc
 {
     [annotationsCopy release];
     [super dealloc];
 }
+#endif
 
 -(MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
@@ -221,7 +223,9 @@
 
 - (void) addAnnotations:(NSArray *)annotations
 {
+    #if !__has_feature(objc_arc)
     [annotationsCopy release];
+#endif
     annotationsCopy = [annotations copy];
     
     NSArray *add = [REVClusterManager clusterAnnotationsForMapView:self forAnnotations:annotations blocks:self.blocks minClusterLevel:self.minimumClusterLevel];
