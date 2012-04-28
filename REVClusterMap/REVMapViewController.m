@@ -106,6 +106,8 @@
         
         annView.image = [UIImage imageNamed:@"pinpoint.png"];
         annView.canShowCallout = YES;   
+        
+        annView.calloutOffset = CGPointMake(-6.0, 0.0);
     }
     return annView;
 }
