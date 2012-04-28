@@ -78,40 +78,6 @@
     
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
-{
-    if([annotation class] == MKUserLocation.class) {
-		//userLocation = annotation;
-		return nil;
-	}
-    
-    REVClusterPin *pin = (REVClusterPin *)annotation;
-    
-    MKAnnotationView *annView;
-    
-    if( [pin nodeCount] > 0 ){
-        annView = (REVClusterAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"cluster"];
-        
-        if( !annView )
-            annView = (REVClusterAnnotationView*)[[[REVClusterAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"cluster"] autorelease];
-        
-        annView.image = [UIImage imageNamed:@"cluster.png"];
-        [(REVClusterAnnotationView*)annView setClusterText:[NSString stringWithFormat:@"%i",[pin nodeCount]]];
-        annView.canShowCallout = YES;
-    } else {
-        annView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
-        
-        if( !annView )
-            annView = [[[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"] autorelease];
-        
-        annView.image = [UIImage imageNamed:@"pinpoint.png"];
-        annView.canShowCallout = YES;   
-        
-        annView.calloutOffset = CGPointMake(-6.0, 0.0);
-    }
-    return annView;
-}
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -129,6 +95,72 @@
 {
     // Return YES for supported orientations
     return YES;
+}
+
+#pragma mark -
+#pragma mark Map view delegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if([annotation class] == MKUserLocation.class) {
+		//userLocation = annotation;
+		return nil;
+	}
+    
+    REVClusterPin *pin = (REVClusterPin *)annotation;
+    
+    MKAnnotationView *annView;
+    
+    if( [pin nodeCount] > 0 ){
+        pin.title = @"___";
+        
+        annView = (REVClusterAnnotationView*)
+        [mapView dequeueReusableAnnotationViewWithIdentifier:@"cluster"];
+        
+        if( !annView )
+            annView = (REVClusterAnnotationView*)
+            [[[REVClusterAnnotationView alloc] initWithAnnotation:annotation 
+                                                  reuseIdentifier:@"cluster"] autorelease];
+        
+        annView.image = [UIImage imageNamed:@"cluster.png"];
+        
+        [(REVClusterAnnotationView*)annView setClusterText:
+         [NSString stringWithFormat:@"%i",[pin nodeCount]]];
+        
+        annView.canShowCallout = NO;
+    } else {
+        annView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
+        
+        if( !annView )
+            annView = [[[MKAnnotationView alloc] initWithAnnotation:annotation 
+                                                    reuseIdentifier:@"pin"] autorelease];
+        
+        annView.image = [UIImage imageNamed:@"pinpoint.png"];
+        annView.canShowCallout = YES;   
+        
+        annView.calloutOffset = CGPointMake(-6.0, 0.0);
+    }
+    return annView;
+}
+
+- (void)mapView:(MKMapView *)mapView 
+didSelectAnnotationView:(MKAnnotationView *)view
+{
+    NSLog(@"REVMapViewController mapView didSelectAnnotationView:");
+    
+    if (![view isKindOfClass:[REVClusterAnnotationView class]])
+        return;
+    
+    CLLocationCoordinate2D centerCoordinate = [(REVClusterPin *)view.annotation coordinate];
+    
+    MKCoordinateSpan newSpan = 
+    MKCoordinateSpanMake(mapView.region.span.latitudeDelta/2.0, 
+                         mapView.region.span.longitudeDelta/2.0);
+    
+    //mapView.region = MKCoordinateRegionMake(centerCoordinate, newSpan);
+    
+    [mapView setRegion:MKCoordinateRegionMake(centerCoordinate, newSpan) 
+              animated:YES];
 }
 
 @end
